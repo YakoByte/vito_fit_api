@@ -1,0 +1,36 @@
+# Python compiled files
+*.pyc
+__pycache__/
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# Django settings file
+# settings.py
+
+# Database files
+*.db
+db.sqlite3
+
+# Log files
+*.log
+
+# Media files
+media/
+
+# Static files
+staticfiles/
+static/
+
+# Secret keys
+*.key
+*.secret
+
+# Other project-specific files
+*.swp
+.DS_Store
+
+# Environment variables
+.env
