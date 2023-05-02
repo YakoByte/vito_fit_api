@@ -47,7 +47,7 @@ class ObjectDetectionApi(APIView):
             input_mean = 127.5
             input_std = 127.5
 
-            min_conf=0.5
+            min_conf=0.3
             txt_only=False
 
             image = cv2.imdecode(np.fromstring(image_file.read(), np.uint8), cv2.IMREAD_UNCHANGED)
@@ -73,6 +73,12 @@ class ObjectDetectionApi(APIView):
             print("boxes", boxes)
             print("classes", classes)
             print("scores", scores)
+
+            # display the names of all detected objects
+            print("detected objects:")
+            for i in range(len(scores)):
+                print(labels[int(classes[i])])
+
 
             detections = []
 
