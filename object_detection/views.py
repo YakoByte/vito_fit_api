@@ -65,9 +65,7 @@ class ObjectDetectionApi(APIView):
                 output_details = interpreter.get_output_details()
                 height = input_details[0]['shape'][1]
                 width = input_details[0]['shape'][2]
-
                 float_input = (input_details[0]['dtype'] == np.float32)
-
                 input_mean = 127.5
                 input_std = 127.5
 
